@@ -1,0 +1,47 @@
+{
+  "name": "docpad-plugin-markit",
+  "version": "2.0.0",
+  "description": "Markdown rendering for Docpad, using Markdown it",
+  "homepage": "https://github.com/tbusser/docpad-plugin-markit",
+  "license": {
+    "type": "MIT"
+  },
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "markdown",
+    "markdown-it",
+    "markdown-it-plugin"
+  ],
+  "author": "Thijs Busser <tbusser@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/tbusser/docpad-plugin-markit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbusser/docpad-plugin-markit.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  },
+  "dependencies": {
+    "highlight.js": "^9.1.0",
+    "markdown-it": "^6.0.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "docpad": "6",
+    "projectz": "^0.5.0"
+  },
+  "main": "./out/markit.plugin.js",
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
+  },
+  "maintainers": [
+    ""
+  ],
+  "contributors": []
+}
