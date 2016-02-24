@@ -30,7 +30,7 @@ module.exports = (BasePlugin) ->
 					if lang && hljs.getLanguage lang
 						try
 							result = hljs.highlight lang, str, true
-							if typeof config.highlighterWrapper is 'string' and config.highlighterWrapper is not ''
+							if typeof config.highlighterWrapper is 'string' and not not config.highlighterWrapper
 								result.value = config.highlighterWrapper.replace /{{code}}/, result.value
 							return result.value
 						catch error
