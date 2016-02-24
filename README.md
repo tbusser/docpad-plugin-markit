@@ -32,12 +32,18 @@ xhtmlOut       : false        // Use '/' to close single tags (<br />).
                               // This is only for full CommonMark compatibility.
 ```
 
-In addition there are two custom options. These are the default configurations for these options:
+In addition there are some Markit custom options. These are the default configurations for these options:
 ```
-plugins        : []           // Array of strings, each entry should be a
+highlighterWrapper : null     // When useHighlighter is true this option can be
+                              // used to specify a custom wrapper to be used by
+                              // highlighter. Make sure the custom wrapper
+                              // contains the string '{{code}}', this is where
+                              // the result from highlighter.js will be inserted
+
+plugins            : []       // Array of strings, each entry should be a
                               // markdown-it plugin in
 
-useHighlighter : false        // When 'true' markdown-it will use highlight.js
+useHighlighter     : false    // When 'true' markdown-it will use highlight.js
                               // for code blocks
 ```
 

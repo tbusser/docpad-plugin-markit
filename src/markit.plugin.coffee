@@ -6,15 +6,16 @@ module.exports = (BasePlugin) ->
 		name: 'markit'
 
 		config:
-			breaks: false
-			html: false
-			langPrefix: 'language-'
-			linkify: false
-			plugins: []
-			quotes: '“”‘’'
-			typographer: false
-			useHighlighter: false
-			xhtmlOut: false
+			breaks             : false
+			highlighterWrapper : null
+			html               : false
+			langPrefix         : 'language-'
+			linkify            : false
+			plugins            : []
+			quotes             : '“”‘’'
+			typographer        : false
+			useHighlighter     : false
+			xhtmlOut           : false
 
 		# Render
 		# Called per document, for each extension conversion. Used to render one extension to another.
@@ -28,8 +29,10 @@ module.exports = (BasePlugin) ->
 				highlighter = (str, lang) ->
 					if lang && hljs.getLanguage lang
 						try
-						  result =  hljs.highlight lang, str, true
-						  return result.value
+							result = hljs.highlight lang, str, true
+							if typeof config.highlighterWrapper is 'string' and config.highlighterWrapper is not ''
+								result.value = config.highlighterWrapper.replace /{{code}}/, result.value
+							return result.value
 						catch error
 					return ''
 
