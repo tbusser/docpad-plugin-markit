@@ -10,8 +10,7 @@
     "docpad",
     "docpad-plugin",
     "markdown",
-    "markdown-it",
-    "markdown-it-plugin"
+    "markdown-it"
   ],
   "author": "Thijs Busser <tbusser@gmail.com>",
   "bugs": {
