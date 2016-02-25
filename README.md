@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tbusser/docpad-plugin-markit.svg?branch=master)](https://travis-ci.org/tbusser/docpad-plugin-markit)
+
 # Markit Plugin for [DocPad](http://docpad.org)
 This plugin will render files with the `.md` or `.markdown` extension using [markdown-it](https://github.com/markdown-it/markdown-it).
 
