@@ -37,6 +37,9 @@
     "projectz": "^0.5.0"
   },
   "main": "./out/markit.plugin.js",
+  "scripts": {
+    "test": "node ./out/markit.test.js"
+  },
   "cakeConfiguration": {
     "COFFEE_SRC_PATH": "src"
   },
