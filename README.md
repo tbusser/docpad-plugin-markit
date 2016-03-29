@@ -52,6 +52,8 @@ useHighlighter     : false    // When 'true' markdown-it will use highlight.js
 ### Using markdown-it Plugins
 If you want to use markdown-it plugins you can do this by installing the package in your project and overwriting the plugins configuration option.
 
+Plugin options are specified as configuration options using the plugin name with any dashes (-) converted to underscores (_).
+
 #### Example
 Say you want to use footnotes, markdown-it has a [plugin](https://github.com/markdown-it/markdown-it-footnote) for this. To enable this plugin you will first have to install the package. You can do this by running the following command from your project folder:
 ```
@@ -65,6 +67,7 @@ docpadConfig:
 		<the other plugins you need to configure>
 		markit:
 			plugins: ['markdown-it-footnote']
+            markdown_it_footnote: {...}
 ```
 
 ## Credits

@@ -52,7 +52,9 @@ module.exports = (BasePlugin) ->
 
 				# Load the plugins defined by the docpad.coffee file
 				for plugin in config.plugins
-					markedIt.use(require(plugin))
+					pluginConfig = plugin.replace(/-/g, "_")
+					pluginOpts = if config[pluginConfig] then config[pluginConfig] else {}
+					markedIt.use(require(plugin), pluginOpts)
 
 				# Render the markdown content
 				opts.content = markedIt.render opts.content
