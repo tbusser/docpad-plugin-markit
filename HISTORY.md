@@ -1,4 +1,7 @@
 ## History
+v2.3.0 March 29, 2016
+	- Add support to pass along markdown-it plugin options
+
 v2.2.0 February 25, 2016
 	- Add unit tests for Markit options
 
