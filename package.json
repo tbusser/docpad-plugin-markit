@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-markit",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Markdown rendering for Docpad, using Markdown it",
   "homepage": "https://github.com/tbusser/docpad-plugin-markit",
   "license": {
@@ -46,6 +46,8 @@
     ""
   ],
   "contributors": [
+    "julrichkieffer (https://github.com/julrichkieffer)",
+    "donutfarian (https://github.com/donutfarian)",
     "tbusser (https://github.com/tbusser)"
   ]
 }

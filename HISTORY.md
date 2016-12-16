@@ -1,6 +1,9 @@
 ## History
+v2.4.0 December 16, 2016
+	- Updated the markdown-it dependency to v8.x (thanks to julrichkieffer)
+
 v2.3.0 March 29, 2016
-	- Add support to pass along markdown-it plugin options
+	- Add support to pass along markdown-it plugin options (thanks to donutfarian)
 
 v2.2.0 February 25, 2016
 	- Add unit tests for Markit options
