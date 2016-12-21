@@ -14,6 +14,7 @@ module.exports = (BasePlugin) ->
 			plugins            : []
 			quotes             : '“”‘’'
 			typographer        : false
+			highlighter		   : null
 			useHighlighter     : false
 			xhtmlOut           : false
 
@@ -24,7 +25,9 @@ module.exports = (BasePlugin) ->
 			config = @config
 			{inExtension,outExtension,file} = opts
 			highlighter = null
-			if config.useHighlighter
+			if config.highlighter
+				highlighter = config.highlighter
+			else if config.useHighlighter
 				hljs = require('highlight.js')
 				highlighter = (str, lang) ->
 					if lang && hljs.getLanguage lang

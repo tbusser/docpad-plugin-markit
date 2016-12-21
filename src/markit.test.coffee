@@ -20,6 +20,25 @@ require('docpad').require('testers')
 					.test(
 						# Test configuration
 						{
+							outExpectedPath : __dirname+'/../test/out-expected-no-highlighter'
+							pluginPath      : __dirname+'/..',
+							pluginName      : 'markit',
+							testerClass     : 'RendererTester'
+							testerName      : 'Markit withhout using highlighter.js, but rather handling code blocks directly'
+						}
+
+						# Docpad configuration
+						{
+							plugins:
+								markit:
+									useHighlighter: false
+									highlighter: (code, lang) ->
+										console.log "#{lang} code block:\n#{code}"
+						}
+					)
+					.test(
+						# Test configuration
+						{
 							outExpectedPath : __dirname+'/../test/out-expected-default-highlighter'
 							pluginPath      : __dirname+'/..',
 							pluginName      : 'markit',
