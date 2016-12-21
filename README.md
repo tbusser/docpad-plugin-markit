@@ -12,8 +12,8 @@ docpad install markit
 For information on customising your plugin configuration you can refer to the [DocPad FAQ](https://github.com/bevry/docpad/wiki/FAQ)
 
 ### Markit Options
-The Markit plugin supports all the options supported by the [markdown-it](https://github.com/markdown-it/markdown-it) project except `highlight`. By default the following configuration is used:
-```
+The Markit plugin supports all the options supported by the [markdown-it](https://github.com/markdown-it/markdown-it) project. By default the following configuration is used:
+```javascript
 breaks         : false        // Convert '\n' in paragraphs into <br>
 
 html           : false        // Enable HTML tags in source
@@ -35,18 +35,25 @@ xhtmlOut       : false        // Use '/' to close single tags (<br />).
 ```
 
 In addition there are some Markit custom options. These are the default configurations for these options:
-```
+```javascript
+plugins            : []       // Array of strings, each entry should be a
+                              // markdown-it plugin
+
+highlighter        : null     // An extensibility point. Assigning a 
+                              // `function (code, language) { }` to this option 
+                              // will allow direct control of the rendering of
+                              // code blocks.
+                              //
+                              // By leaving this `null`, the below options apply. 
+
+useHighlighter     : false    // When 'true' markdown-it will use highlight.js
+                              // for code blocks
+
 highlighterWrapper : null     // When useHighlighter is true this option can be
                               // used to specify a custom wrapper to be used by
                               // highlighter. Make sure the custom wrapper
                               // contains the string '{{code}}', this is where
                               // the result from highlighter.js will be inserted
-
-plugins            : []       // Array of strings, each entry should be a
-                              // markdown-it plugin in
-
-useHighlighter     : false    // When 'true' markdown-it will use highlight.js
-                              // for code blocks
 ```
 
 ### Using markdown-it Plugins
